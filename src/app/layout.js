@@ -1,15 +1,9 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import Sidebar from "@/app/components/SIdebar";
+import MusicPlayer from "@/app/components/MusicPlayer";
 import "./globals.css";
+import { PlayerProvider } from "@/app/components/PlayerContext";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Create Next App",
@@ -20,9 +14,26 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`antialiased`}
       >
-        {children}
+        <PlayerProvider>
+        <main className="relative flex min-h-screen">
+          {/* Fixed Sidebar */}
+          <div className="fixed left-0 top-0 h-full w-[24%] z-20">
+            <Sidebar />
+          </div>
+
+          {/* Main content area */}
+          <div className="ml-[24%] flex-1 pb-20 overflow-y-auto relative">
+            {children}
+          </div>
+
+          {/* Fixed Music Player at the bottom */}
+          <div className="fixed left-0 bottom-0 w-full z-30">
+            <MusicPlayer />
+          </div>
+        </main>
+        </PlayerProvider>
       </body>
     </html>
   );

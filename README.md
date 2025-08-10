@@ -1,36 +1,121 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Music Player Application
+
+A modern, web-based music player application built with Next.js and React, featuring a sleek user interface and integration with the Deezer API for music streaming.
+
+## Features
+
+### User Interface
+- Clean and intuitive user interface with a dark theme
+- Responsive design that works across different screen sizes
+- Beautiful glassmorphic design elements with blur effects
+- Sidebar navigation for easy access to different sections
+
+### Music Playback
+- Audio playback using HTML5 audio element
+- Play/Pause functionality
+- Next/Previous track controls
+- Volume control with visual slider
+- 30-second preview support for tracks
+
+### Content Organization
+- Browse music by different categories:
+  - Top Charts
+  - Artists
+  - Albums
+  - Songs
+  - Genres
+- Genre-based playlists with custom cover images
+- Artist profiles with images
+- Album artwork display
+
+### Genre Exploration
+- Horizontal scrolling genre grid
+- Support for various genres including:
+  - Lofi
+  - Chill
+  - Pop
+  - Electronic
+  - Jazz
+  - Rock
+
+### Integration
+- Deezer API integration for music content
+- Real-time music data fetching
+- Dynamic playlist loading
+- Artist and album information retrieval
+
+## Technologies Used
+
+- **Frontend Framework**: Next.js 15.3.4
+- **UI Library**: React 19.0.0
+- **Styling**: TailwindCSS 4.0
+- **Icons**: Lucide React
+- **API Integration**: Deezer API
+- **Development Tools**: 
+  - ESLint
+  - PostCSS
+  - TurboPack
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone the repository**
+```bash
+git clone https://github.com/abhayhonparkhe/music-player.git
+cd music-player
+```
 
+2. **Install dependencies**
+```bash
+npm install
+# or
+yarn install
+```
+
+3. **Start the development server**
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **Open the application**
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Features Implementation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Music Player (`MusicPlayer.jsx`)
+- Global audio player context for consistent playback
+- Volume control with visual feedback
+- Track information display
+- Playback controls (play, pause, next, previous)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Genre Navigation (`GenreGrid.jsx`)
+- Infinite scrolling genre grid
+- Smooth animations
+- Genre-specific playlist loading
 
-## Deploy on Vercel
+### Context Management (`PlayerContext.jsx`)
+- Global state management for audio playback
+- Playlist tracking
+- Volume state persistence
+- Audio controls coordination
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## How to Use
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Navigation**: Use the sidebar to navigate between different sections (Home, Artists, Albums, Songs)
+2. **Playback**: 
+   - Click on any song to start playing
+   - Use the player controls at the bottom to play/pause, skip tracks, or adjust volume
+   - Browse different genres and playlists from the home page
+3. **Browse Content**:
+   - Explore the Top Charts section for popular tracks
+   - View artist profiles in the Artists section
+   - Browse albums in the Albums section
+   - Access all songs in the Songs section
+
+
+
+
