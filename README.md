@@ -1,4 +1,6 @@
 # Music Player Application
+<img width="1919" height="1079" alt="Screenshot 2025-08-10 170852" src="https://github.com/user-attachments/assets/adf81c3d-04bf-4de6-8bec-a70781f2a490" />
+
 
 A modern, web-based music player application built with Next.js and React, featuring a sleek user interface and integration with the Deezer API for music streaming.
 
